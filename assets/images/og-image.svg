@@ -1,0 +1,49 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ogTitle ogDesc">
+  <title id="ogTitle">RedeGastro</title>
+  <desc id="ogDesc">Imagem social do protótipo RedeGastro com logo e slogan.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1F120C"/>
+      <stop offset="0.5" stop-color="#2A160F"/>
+      <stop offset="1" stop-color="#3A2117"/>
+    </linearGradient>
+    <linearGradient id="plateArc" x1="137" y1="164" x2="335" y2="390" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF7ED"/>
+      <stop offset="0.58" stop-color="#FFF7ED"/>
+      <stop offset="0.77" stop-color="#F97316"/>
+      <stop offset="1" stop-color="#C2410C"/>
+    </linearGradient>
+    <linearGradient id="gastroText" x1="560" y1="213" x2="1025" y2="213" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F97316"/>
+      <stop offset="1" stop-color="#C2410C"/>
+    </linearGradient>
+    <linearGradient id="node" x1="195" y1="210" x2="332" y2="340" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF8A33"/>
+      <stop offset="1" stop-color="#C2410C"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="78" y="76" width="1044" height="478" rx="8" fill="#2A160F" stroke="#5A3928" stroke-width="2"/>
+  <g aria-hidden="true">
+    <path d="M153 226C191 169 269 148 326 185C390 225 410 312 367 374C326 435 242 455 180 410C134 377 114 318 128 266" stroke="url(#plateArc)" stroke-width="16" stroke-linecap="round"/>
+    <path d="M178 292C174 254 196 218 232 203" stroke="#5A3928" stroke-width="10" stroke-linecap="round"/>
+    <path d="M124 249V322" stroke="#FFF7ED" stroke-width="16" stroke-linecap="round"/>
+    <path d="M98 249V322" stroke="#FFF7ED" stroke-width="16" stroke-linecap="round"/>
+    <path d="M150 249V322" stroke="#FFF7ED" stroke-width="16" stroke-linecap="round"/>
+    <path d="M98 325C98 354 127 352 127 386V430" stroke="#FFF7ED" stroke-width="16" stroke-linecap="round"/>
+    <path d="M210 381L271 325L306 428L332 347L387 377" stroke="#8B7462" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M239 303L303 226L332 347L271 325" stroke="#8B7462" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="239" cy="303" r="24" fill="url(#node)"/>
+    <circle cx="303" cy="226" r="24" fill="url(#node)"/>
+    <circle cx="332" cy="347" r="38" fill="url(#node)"/>
+    <circle cx="210" cy="381" r="24" fill="url(#node)"/>
+    <circle cx="306" cy="428" r="24" fill="url(#node)"/>
+    <circle cx="387" cy="377" r="24" fill="url(#node)"/>
+    <path d="M397 223L409 264L452 276L409 289L397 329L384 289L342 276L384 264L397 223Z" fill="#FACC15"/>
+  </g>
+  <text x="468" y="300" fill="#FFF7ED" font-family="Arial, Helvetica, sans-serif" font-size="125" font-weight="900">Rede</text>
+  <text x="758" y="300" fill="url(#gastroText)" font-family="Arial, Helvetica, sans-serif" font-size="125" font-weight="900">Gastro</text>
+  <text x="475" y="370" fill="#D6C7B8" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="500">A rede de talentos da gastronomia</text>
+  <circle cx="1024" cy="357" r="7" fill="#FACC15"/>
+  <text x="475" y="456" fill="#FFF7ED" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">Protótipo visual e navegável para validação da ideia.</text>
+</svg>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Protótipo da RedeGastro, plataforma que conecta restaurantes a profissionais freelancers da gastronomia.">
+  <meta property="og:title" content="RedeGastro | Freelancers da gastronomia">
+  <meta property="og:description" content="A rede de talentos da gastronomia. Protótipo visual e navegável para validação da ideia.">
+  <meta property="og:image" content="assets/images/og-image.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <title>RedeGastro | Freelancers da gastronomia</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/utilities.css">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" data-header>
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="RedeGastro - início">
+        <img src="assets/images/logo-redegastro.svg" alt="RedeGastro" width="214" height="58">
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="main-menu" aria-expanded="false" data-menu-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="main-menu" aria-label="Navegação principal" data-main-nav>
+        <a class="main-nav__link is-active" href="index.html">Início</a>
+        <a class="main-nav__link" href="pages/profissionais.html">Profissionais</a>
+        <a class="main-nav__link" href="pages/vagas.html">Vagas</a>
+        <a class="main-nav__link" href="#como-funciona">Como funciona</a>
+        <a class="main-nav__link" href="pages/sobre.html">Sobre</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn--secondary" href="pages/login.html">Entrar</a>
+        <a class="btn btn--primary" href="pages/cadastro.html">Criar perfil</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero section">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <span class="badge badge--soft">Protótipo em validação</span>
+          <h1>Freelancers da gastronomia para hoje, amanhã ou seu próximo evento.</h1>
+          <p class="hero__lead">A RedeGastro conecta restaurantes, bares, cafeterias, buffets e eventos a profissionais avaliados, disponíveis e prontos para trabalhar.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--large" href="pages/profissionais.html">Encontrar profissionais</a>
+            <a class="btn btn--ghost btn--large" href="pages/vagas.html">Publicar uma vaga</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Resumo visual da plataforma">
+          <div class="hero-panel__top">
+            <span class="badge badge--urgent">Vaga urgente</span>
+            <span class="rating" aria-label="Avaliação média 4.8">★ 4.8</span>
+          </div>
+          <h2>Garçom para plantão noturno</h2>
+          <p>Sabor & Brasa Restaurante precisa de apoio para hoje em Campo Grande/MS.</p>
+          <div class="hero-panel__profile">
+            <div class="avatar avatar--lg" aria-hidden="true">LA</div>
+            <div>
+              <strong>Lucas Almeida</strong>
+              <span>Profissional avaliado</span>
+            </div>
+          </div>
+          <ul class="check-list">
+            <li>Contato via WhatsApp</li>
+            <li>Disponível para hoje</li>
+            <li>Experiência em salão e eventos</li>
+          </ul>
+        </aside>
+      </div>
+
+      <div class="container">
+        <form class="quick-search" action="pages/profissionais.html" method="get" data-quick-search>
+          <div class="form-field">
+            <label for="quick-role">Função</label>
+            <input id="quick-role" name="funcao" type="search" placeholder="Garçom, cozinheiro, barista...">
+          </div>
+          <div class="form-field">
+            <label for="quick-neighborhood">Bairro</label>
+            <input id="quick-neighborhood" name="bairro" type="search" placeholder="Centro, Jardim dos Estados...">
+          </div>
+          <button class="btn btn--primary" type="submit">Buscar profissionais</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="metrics section section--compact" aria-label="Indicadores fictícios">
+      <div class="container metrics__grid">
+        <article class="metric-card">
+          <strong>+120</strong>
+          <span>profissionais cadastrados</span>
+        </article>
+        <article class="metric-card">
+          <strong>+45</strong>
+          <span>restaurantes interessados</span>
+        </article>
+        <article class="metric-card">
+          <strong>+80</strong>
+          <span>contatos simulados</span>
+        </article>
+        <article class="metric-card">
+          <strong>4.8</strong>
+          <span>média de avaliação</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Oportunidades rápidas</span>
+            <h2>Vagas urgentes</h2>
+          </div>
+          <a class="link-arrow" href="pages/vagas.html">Ver todas</a>
+        </div>
+        <div class="card-grid card-grid--jobs" id="urgent-jobs" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section section--surface">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Talentos avaliados</span>
+            <h2>Profissionais em destaque</h2>
+          </div>
+          <a class="link-arrow" href="pages/profissionais.html">Encontrar mais</a>
+        </div>
+        <div class="card-grid card-grid--professionals" id="featured-professionals" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section" id="como-funciona">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <span class="eyebrow">Como funciona</span>
+          <h2>Um fluxo simples para conectar quem precisa com quem sabe fazer.</h2>
+        </div>
+
+        <div class="steps">
+          <article class="step-card">
+            <span class="step-card__number">1</span>
+            <h3>Restaurante publica uma vaga</h3>
+            <p>Diárias, eventos, plantões e demandas recorrentes aparecem em um formato fácil de entender.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-card__number">2</span>
+            <h3>Profissionais se candidatam</h3>
+            <p>Freelancers avaliados podem demonstrar interesse ou serem encontrados por região e habilidade.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-card__number">3</span>
+            <h3>Contato rápido pelo WhatsApp</h3>
+            <p>A conversa começa de forma direta, com mensagem simulada para validação do protótipo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--split">
+      <div class="container split-grid">
+        <article class="cta-panel">
+          <span class="eyebrow">Para restaurantes</span>
+          <h2>Complete sua equipe sem complicação.</h2>
+          <p>Publique oportunidades para diárias, eventos, plantões e vagas recorrentes. Encontre profissionais avaliados e disponíveis.</p>
+          <a class="btn btn--primary" href="pages/vagas.html">Publicar vaga</a>
+        </article>
+
+        <article class="cta-panel cta-panel--accent">
+          <span class="eyebrow">Para profissionais</span>
+          <h2>Transforme sua experiência em oportunidades.</h2>
+          <p>Crie um perfil público, receba avaliações e seja encontrado por restaurantes da sua região.</p>
+          <a class="btn btn--secondary" href="pages/cadastro.html">Criar perfil profissional</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div>
+        <a class="brand brand--footer" href="index.html" aria-label="RedeGastro - início">
+          <img src="assets/images/logo-redegastro.svg" alt="RedeGastro" width="194" height="52">
+        </a>
+        <p>A rede de talentos da gastronomia.</p>
+      </div>
+      <nav class="footer-links" aria-label="Links do rodapé">
+        <a href="pages/profissionais.html">Profissionais</a>
+        <a href="pages/vagas.html">Vagas</a>
+        <a href="pages/sobre.html">Sobre</a>
+        <a href="pages/termos.html">Termos de uso</a>
+        <a href="pages/privacidade.html">Política de privacidade</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <p>Este é um protótipo navegável da RedeGastro para validação da ideia. Nenhum dado é salvo ou processado de forma real.</p>
+      <p>Versão demonstrativa para GitHub Pages. <span data-current-year></span></p>
+    </div>
+  </footer>
+
+  <div class="toast-region" aria-live="polite" aria-atomic="true" data-toast-region></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

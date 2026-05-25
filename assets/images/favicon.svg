@@ -1,0 +1,31 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="faviconTitle">
+  <title id="faviconTitle">RedeGastro</title>
+  <defs>
+    <linearGradient id="plateArc" x1="10" y1="6" x2="58" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF7ED"/>
+      <stop offset="0.58" stop-color="#FFF7ED"/>
+      <stop offset="0.78" stop-color="#F97316"/>
+      <stop offset="1" stop-color="#C2410C"/>
+    </linearGradient>
+    <linearGradient id="node" x1="22" y1="18" x2="54" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF8A33"/>
+      <stop offset="1" stop-color="#C2410C"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="#2A160F"/>
+  <path d="M13 19C21 7 39 5 50 16C62 28 59 49 43 57C28 65 10 56 7 40" stroke="url(#plateArc)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M18 34C17 27 21 20 28 17" stroke="#5A3928" stroke-width="3" stroke-linecap="round"/>
+  <path d="M8 23V37" stroke="#FFF7ED" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M4 23V37" stroke="#FFF7ED" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M12 23V37" stroke="#FFF7ED" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M4 38C4 44 10 44 10 51" stroke="#FFF7ED" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M22 45L34 36L40 53L45 40L55 46" stroke="#8B7462" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M28 32L38 19L45 40L34 36" stroke="#8B7462" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="28" cy="32" r="5" fill="url(#node)"/>
+  <circle cx="38" cy="19" r="5" fill="url(#node)"/>
+  <circle cx="45" cy="40" r="8" fill="url(#node)"/>
+  <circle cx="22" cy="45" r="5" fill="url(#node)"/>
+  <circle cx="40" cy="53" r="5" fill="url(#node)"/>
+  <circle cx="55" cy="46" r="5" fill="url(#node)"/>
+  <path d="M51 17L53 24L60 26L53 28L51 35L49 28L42 26L49 24L51 17Z" fill="#FACC15"/>
+</svg>

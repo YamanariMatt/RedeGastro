@@ -1,0 +1,7 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="placeholderTitle">
+  <title id="placeholderTitle">Imagem demonstrativa</title>
+  <rect width="160" height="160" rx="18" fill="#3B2418"/>
+  <circle cx="80" cy="64" r="24" fill="#4A2E20" stroke="#F97316" stroke-width="3"/>
+  <path d="M46 116C54 96 68 86 80 86C92 86 106 96 114 116" stroke="#D6C7B8" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="108" cy="46" r="9" fill="#FACC15"/>
+</svg>

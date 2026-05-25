@@ -1,0 +1,45 @@
+<svg width="420" height="112" viewBox="0 0 420 112" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">RedeGastro</title>
+  <desc id="logoDesc">Logo horizontal da RedeGastro com prato, garfo, rede de profissionais e estrela de avaliação.</desc>
+  <defs>
+    <linearGradient id="plateArc" x1="22" y1="16" x2="102" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF7ED"/>
+      <stop offset="0.58" stop-color="#FFF7ED"/>
+      <stop offset="0.76" stop-color="#F97316"/>
+      <stop offset="1" stop-color="#C2410C"/>
+    </linearGradient>
+    <linearGradient id="gastroText" x1="242" y1="30" x2="389" y2="30" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F97316"/>
+      <stop offset="1" stop-color="#C2410C"/>
+    </linearGradient>
+    <linearGradient id="orangeNode" x1="44" y1="38" x2="94" y2="84" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF8A33"/>
+      <stop offset="1" stop-color="#C2410C"/>
+    </linearGradient>
+  </defs>
+
+  <g aria-hidden="true">
+    <path d="M25 33C39 14 65 8 87 18C111 29 122 56 112 81C102 106 73 116 49 104C31 95 20 78 19 59" stroke="url(#plateArc)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M36 58C35 46 42 35 53 30" stroke="#5A3928" stroke-width="4" stroke-linecap="round"/>
+    <path d="M47 82L67 64L78 96L88 72L105 82" stroke="#8B7462" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M56 58L76 34L88 72L67 64" stroke="#8B7462" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M18 42V63" stroke="#FFF7ED" stroke-width="5" stroke-linecap="round"/>
+    <path d="M10 42V63" stroke="#FFF7ED" stroke-width="5" stroke-linecap="round"/>
+    <path d="M26 42V63" stroke="#FFF7ED" stroke-width="5" stroke-linecap="round"/>
+    <path d="M10 64C10 72 18 72 18 82V96" stroke="#FFF7ED" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="56" cy="58" r="8" fill="url(#orangeNode)"/>
+    <circle cx="76" cy="34" r="8" fill="url(#orangeNode)"/>
+    <circle cx="88" cy="72" r="13" fill="url(#orangeNode)"/>
+    <circle cx="47" cy="82" r="8" fill="url(#orangeNode)"/>
+    <circle cx="78" cy="96" r="8" fill="url(#orangeNode)"/>
+    <circle cx="105" cy="82" r="8" fill="url(#orangeNode)"/>
+    <path d="M101 33L105 46L118 50L105 54L101 67L97 54L84 50L97 46L101 33Z" fill="#FACC15"/>
+  </g>
+
+  <g>
+    <text x="136" y="62" fill="#FFF7ED" font-family="Arial, Helvetica, sans-serif" font-size="47" font-weight="900">Rede</text>
+    <text x="245" y="62" fill="url(#gastroText)" font-family="Arial, Helvetica, sans-serif" font-size="47" font-weight="900">Gastro</text>
+    <text x="139" y="88" fill="#D6C7B8" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500">A rede de talentos da gastronomia</text>
+    <circle cx="383" cy="83" r="3" fill="#FACC15"/>
+  </g>
+</svg>
