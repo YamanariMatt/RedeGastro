@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dashboard fictício de restaurante da RedeGastro para demonstração do protótipo navegável.">
+  <meta property="og:title" content="RedeGastro | Dashboard restaurante">
+  <meta property="og:description" content="Painel demonstrativo do restaurante com métricas, profissionais recomendados e vagas abertas.">
+  <meta property="og:image" content="../assets/images/og-image.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <title>RedeGastro | Dashboard restaurante</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+</head>
+<body data-page="restaurant-dashboard">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" data-header>
+    <div class="container header__inner">
+      <a class="brand" href="../index.html" aria-label="RedeGastro - início">
+        <img src="../assets/images/logo-redegastro.svg" alt="RedeGastro" width="214" height="58">
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="main-menu" aria-expanded="false" data-menu-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="main-menu" aria-label="Navegação principal" data-main-nav>
+        <a class="main-nav__link" href="../index.html">Início</a>
+        <a class="main-nav__link" href="profissionais.html">Profissionais</a>
+        <a class="main-nav__link" href="vagas.html">Vagas</a>
+        <a class="main-nav__link" href="../index.html#como-funciona">Como funciona</a>
+        <a class="main-nav__link" href="sobre.html">Sobre</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn--secondary" href="login.html">Entrar</a>
+        <a class="btn btn--primary" href="cadastro.html">Criar perfil</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="page-hero">
+      <div class="container dashboard-hero">
+        <div class="page-hero__content">
+          <span class="badge badge--soft">Dados fictícios para demonstração</span>
+          <h1>Olá, Sabor &amp; Brasa. Gerencie suas vagas simuladas.</h1>
+          <p>Painel demonstrativo com vagas publicadas, profissionais interessados, cliques recebidos e recomendações para sua equipe.</p>
+          <p class="notice">Este painel é parte do protótipo. Nenhum dado é salvo ou processado de forma real.</p>
+        </div>
+
+        <div class="dashboard-actions">
+          <button class="btn btn--primary" type="button" data-toast-message="Publicação de vaga apenas demonstrativa. Nenhum anúncio real foi criado.">Publicar nova vaga</button>
+          <a class="btn btn--secondary" href="perfil-restaurante.html">Ver perfil público</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--compact">
+      <div class="container">
+        <div class="dashboard-metrics">
+          <article class="metric-card">
+            <strong>6</strong>
+            <span>Vagas publicadas</span>
+          </article>
+          <article class="metric-card">
+            <strong>24</strong>
+            <span>Profissionais interessados</span>
+          </article>
+          <article class="metric-card">
+            <strong>58</strong>
+            <span>Cliques recebidos</span>
+          </article>
+          <article class="metric-card">
+            <strong>18</strong>
+            <span>Avaliações feitas</span>
+          </article>
+        </div>
+
+        <div class="dashboard-layout">
+          <div class="dashboard-main">
+            <section class="dashboard-card" aria-labelledby="profissionais-recomendados">
+              <div class="section-heading section-heading--compact">
+                <div>
+                  <span class="eyebrow">Talentos próximos</span>
+                  <h2 id="profissionais-recomendados">Profissionais recomendados</h2>
+                </div>
+                <a class="link-arrow" href="profissionais.html">Ver profissionais</a>
+              </div>
+
+              <div class="dashboard-list">
+                <article class="dashboard-list__item">
+                  <div class="dashboard-profile">
+                    <div class="avatar" aria-hidden="true">LA</div>
+                    <div>
+                      <h3>Lucas Almeida</h3>
+                      <p>Garçom freelancer · Centro · ★ 4.8 · Disponível hoje</p>
+                    </div>
+                  </div>
+                  <div class="dashboard-list__actions">
+                    <a class="btn btn--secondary" href="perfil-profissional.html">Ver perfil</a>
+                    <button class="btn btn--primary" type="button" data-whatsapp-message="Olá, Lucas Almeida! Encontrei seu perfil na RedeGastro e gostaria de conversar sobre uma oportunidade freelancer. Você tem disponibilidade?">Chamar</button>
+                  </div>
+                </article>
+
+                <article class="dashboard-list__item">
+                  <div class="dashboard-profile">
+                    <div class="avatar" aria-hidden="true">PL</div>
+                    <div>
+                      <h3>Patrícia Lima</h3>
+                      <p>Auxiliar de cozinha · Jardim América · ★ 4.5 · Disponível hoje</p>
+                    </div>
+                  </div>
+                  <div class="dashboard-list__actions">
+                    <a class="btn btn--secondary" href="perfil-profissional.html">Ver perfil</a>
+                    <button class="btn btn--primary" type="button" data-whatsapp-message="Olá, Patrícia Lima! Encontrei seu perfil na RedeGastro e gostaria de conversar sobre uma oportunidade freelancer. Você tem disponibilidade?">Chamar</button>
+                  </div>
+                </article>
+
+                <article class="dashboard-list__item">
+                  <div class="dashboard-profile">
+                    <div class="avatar" aria-hidden="true">BM</div>
+                    <div>
+                      <h3>Bruno Martins</h3>
+                      <p>Bartender · Vila Planalto · ★ 4.7 · Noites e eventos</p>
+                    </div>
+                  </div>
+                  <div class="dashboard-list__actions">
+                    <a class="btn btn--secondary" href="perfil-profissional.html">Ver perfil</a>
+                    <button class="btn btn--primary" type="button" data-whatsapp-message="Olá, Bruno Martins! Encontrei seu perfil na RedeGastro e gostaria de conversar sobre uma oportunidade freelancer. Você tem disponibilidade?">Chamar</button>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="dashboard-card" aria-labelledby="vagas-abertas-restaurante">
+              <div class="section-heading section-heading--compact">
+                <div>
+                  <span class="eyebrow">Operação</span>
+                  <h2 id="vagas-abertas-restaurante">Vagas abertas</h2>
+                </div>
+                <a class="link-arrow" href="vagas.html">Ver página pública</a>
+              </div>
+
+              <div class="dashboard-list">
+                <article class="dashboard-list__item">
+                  <div>
+                    <span class="badge badge--urgent">Urgente</span>
+                    <h3>Garçom para plantão noturno</h3>
+                    <p>Centro · Hoje · 18h às 23h · 8 interessados simulados</p>
+                  </div>
+                  <div class="dashboard-list__actions">
+                    <strong class="rating">R$ 140</strong>
+                    <button class="btn btn--secondary" type="button" data-toast-message="Edição de vaga apenas demonstrativa neste protótipo.">Editar</button>
+                  </div>
+                </article>
+
+                <article class="dashboard-list__item">
+                  <div>
+                    <span class="badge badge--soft">Plantão</span>
+                    <h3>Auxiliar de cozinha</h3>
+                    <p>Tiradentes · Quinta-feira · 10h às 16h · 5 interessados simulados</p>
+                  </div>
+                  <div class="dashboard-list__actions">
+                    <strong class="rating">R$ 130</strong>
+                    <button class="btn btn--secondary" type="button" data-toast-message="Edição de vaga apenas demonstrativa neste protótipo.">Editar</button>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+
+          <aside class="dashboard-sidebar" aria-label="Resumo do restaurante">
+            <section class="dashboard-card">
+              <h2>Seu restaurante</h2>
+              <div class="dashboard-profile">
+                <div class="avatar avatar--lg avatar--business" aria-hidden="true">SB</div>
+                <div>
+                  <strong>Sabor &amp; Brasa</strong>
+                  <span>Restaurante · Centro</span>
+                </div>
+              </div>
+              <dl class="detail-list">
+                <div>
+                  <dt>Status</dt>
+                  <dd>Perfil demonstrativo</dd>
+                </div>
+                <div>
+                  <dt>Nota recebida</dt>
+                  <dd>4.7 de 5</dd>
+                </div>
+                <div>
+                  <dt>Vagas ativas</dt>
+                  <dd>3 vagas</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="dashboard-card dashboard-card--notice">
+              <h2>Aviso de protótipo</h2>
+              <p>Dados fictícios para demonstração. Este painel não possui login real, pagamento, contratação, candidatura real ou armazenamento de informações.</p>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div>
+        <a class="brand brand--footer" href="../index.html" aria-label="RedeGastro - início">
+          <img src="../assets/images/logo-redegastro.svg" alt="RedeGastro" width="194" height="52">
+        </a>
+        <p>A rede de talentos da gastronomia.</p>
+      </div>
+      <nav class="footer-links" aria-label="Links do rodapé">
+        <a href="profissionais.html">Profissionais</a>
+        <a href="vagas.html">Vagas</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="termos.html">Termos de uso</a>
+        <a href="privacidade.html">Política de privacidade</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <p>Este é um protótipo navegável da RedeGastro para validação da ideia. Nenhum dado é salvo ou processado de forma real.</p>
+      <p>Versão demonstrativa para GitHub Pages. <span data-current-year></span></p>
+    </div>
+  </footer>
+
+  <div class="toast-region" aria-live="polite" aria-atomic="true" data-toast-region></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/filters.js"></script>
+  <script src="../js/forms.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
