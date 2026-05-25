@@ -205,7 +205,7 @@ window.RedeGastroForms = (function () {
         }
 
         if (window.RedeGastroUI) {
-          window.RedeGastroUI.showToast("Cadastro simulado com sucesso! Este protótipo não salva dados.");
+          window.RedeGastroUI.showToast(form.dataset.successMessage || "Cadastro simulado com sucesso! Este protótipo não salva dados.");
         }
 
         form.reset();

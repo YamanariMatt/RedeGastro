@@ -97,6 +97,7 @@ window.RedeGastroUI = (function () {
       var favoriteButton = event.target.closest("[data-favorite-id]");
       var whatsappButton = event.target.closest("[data-whatsapp-message]");
       var interestButton = event.target.closest("[data-interest-message]");
+      var toastButton = event.target.closest("[data-toast-message]");
 
       if (favoriteButton) {
         var active = toggleFavorite(favoriteButton.dataset.favoriteId);
@@ -110,6 +111,10 @@ window.RedeGastroUI = (function () {
 
       if (interestButton) {
         openWhatsapp(interestButton.dataset.interestMessage);
+      }
+
+      if (toastButton) {
+        showToast(toastButton.dataset.toastMessage);
       }
     });
   }

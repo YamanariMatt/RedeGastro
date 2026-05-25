@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login simulado da RedeGastro para demonstração do protótipo navegável.">
+  <meta property="og:title" content="RedeGastro | Login simulado">
+  <meta property="og:description" content="Tela demonstrativa de entrada da RedeGastro. Nenhuma autenticação real é realizada.">
+  <meta property="og:image" content="../assets/images/og-image.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <title>RedeGastro | Entrar</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+</head>
+<body data-page="login">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" data-header>
+    <div class="container header__inner">
+      <a class="brand" href="../index.html" aria-label="RedeGastro - início">
+        <img src="../assets/images/logo-redegastro.svg" alt="RedeGastro" width="214" height="58">
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="main-menu" aria-expanded="false" data-menu-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="main-menu" aria-label="Navegação principal" data-main-nav>
+        <a class="main-nav__link" href="../index.html">Início</a>
+        <a class="main-nav__link" href="profissionais.html">Profissionais</a>
+        <a class="main-nav__link" href="vagas.html">Vagas</a>
+        <a class="main-nav__link" href="../index.html#como-funciona">Como funciona</a>
+        <a class="main-nav__link" href="sobre.html">Sobre</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn--secondary" href="login.html">Entrar</a>
+        <a class="btn btn--primary" href="cadastro.html">Criar perfil</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="section auth-section">
+      <div class="container auth-layout">
+        <form class="form-card auth-card" data-prototype-form data-success-message="Login simulado com sucesso! Nenhuma autenticação real foi realizada." novalidate>
+          <a class="auth-logo" href="../index.html" aria-label="RedeGastro - início">
+            <img src="../assets/images/logo-redegastro.svg" alt="RedeGastro" width="230" height="62">
+          </a>
+
+          <div class="form-card__header auth-card__header">
+            <span class="eyebrow">Acesso demonstrativo</span>
+            <h1>Entrar na RedeGastro</h1>
+            <p>Login apenas demonstrativo. Nenhuma autenticação real é realizada.</p>
+          </div>
+
+          <div class="form-alert">Protótipo: não envie dados reais.</div>
+
+          <button class="btn btn--secondary btn--full google-button" type="button" data-toast-message="Login com Google apenas demonstrativo. Nenhuma conta foi conectada.">
+            <span aria-hidden="true">G</span>
+            Entrar com Google
+          </button>
+
+          <div class="auth-divider" aria-hidden="true">
+            <span></span>
+          </div>
+
+          <div class="form-field">
+            <label for="login-email">E-mail</label>
+            <input id="login-email" name="email" type="email" autocomplete="email" required data-validation="email">
+            <small class="field-error" data-error-for="login-email"></small>
+          </div>
+
+          <div class="form-field">
+            <label for="login-password">Senha</label>
+            <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+            <small class="field-error" data-error-for="login-password"></small>
+          </div>
+
+          <button class="btn btn--primary btn--full" type="submit">Entrar</button>
+
+          <p class="auth-note">
+            Ainda não tem um perfil?
+            <a href="cadastro.html">Criar acesso simulado</a>
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div>
+        <a class="brand brand--footer" href="../index.html" aria-label="RedeGastro - início">
+          <img src="../assets/images/logo-redegastro.svg" alt="RedeGastro" width="194" height="52">
+        </a>
+        <p>A rede de talentos da gastronomia.</p>
+      </div>
+      <nav class="footer-links" aria-label="Links do rodapé">
+        <a href="profissionais.html">Profissionais</a>
+        <a href="vagas.html">Vagas</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="termos.html">Termos de uso</a>
+        <a href="privacidade.html">Política de privacidade</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <p>Este é um protótipo navegável da RedeGastro para validação da ideia. Nenhum dado é salvo ou processado de forma real.</p>
+      <p>Versão demonstrativa para GitHub Pages. <span data-current-year></span></p>
+    </div>
+  </footer>
+
+  <div class="toast-region" aria-live="polite" aria-atomic="true" data-toast-region></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/filters.js"></script>
+  <script src="../js/forms.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
