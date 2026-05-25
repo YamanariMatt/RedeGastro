@@ -596,6 +596,11 @@ button {
   font-size: 2rem;
 }
 
+.avatar--business {
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--color-card-elevated), var(--color-orange-burnt));
+}
+
 .profile-layout {
   display: grid;
   grid-template-columns: minmax(260px, 320px) 1fr;
