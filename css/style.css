@@ -749,6 +749,82 @@ button {
   color: var(--color-beige);
 }
 
+.admin-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-tables {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.bar-chart {
+  display: grid;
+  gap: 1rem;
+}
+
+.bar-chart__row {
+  display: grid;
+  grid-template-columns: 140px 1fr 56px;
+  gap: 0.8rem;
+  align-items: center;
+  color: var(--color-beige);
+}
+
+.bar-chart__row div {
+  height: 14px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(31, 18, 12, 0.62);
+}
+
+.bar-chart__row i {
+  display: block;
+  width: var(--bar-size);
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--color-orange), var(--color-gold));
+}
+
+.bar-chart__row strong {
+  color: var(--color-cream);
+  text-align: right;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  color: var(--color-beige);
+}
+
+.data-table th,
+.data-table td {
+  border-bottom: 1px solid rgba(90, 57, 40, 0.74);
+  padding: 0.85rem;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.data-table th {
+  color: var(--color-cream);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.data-table td:first-child {
+  color: var(--color-cream);
+  font-weight: 800;
+}
+
 .page-hero {
   padding: 4.5rem 0 2.5rem;
 }

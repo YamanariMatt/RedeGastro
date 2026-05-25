@@ -68,6 +68,7 @@
   }
 
   .quick-search,
+  .admin-grid,
   .dashboard-hero,
   .dashboard-layout,
   .filters-grid,
@@ -205,6 +206,14 @@
   .dashboard-list__actions .btn {
     width: 100%;
     justify-items: stretch;
+  }
+
+  .bar-chart__row {
+    grid-template-columns: 1fr;
+  }
+
+  .bar-chart__row strong {
+    text-align: left;
   }
 
   .metric-card strong {

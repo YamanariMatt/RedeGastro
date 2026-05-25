@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Painel administrativo fictício da RedeGastro para demonstração do protótipo navegável.">
+  <meta property="og:title" content="RedeGastro | Admin demonstrativo">
+  <meta property="og:description" content="Painel administrativo demonstrativo com métricas, tabelas e gráfico visual fictício.">
+  <meta property="og:image" content="../assets/images/og-image.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <title>RedeGastro | Admin demonstrativo</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+</head>
+<body data-page="admin">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" data-header>
+    <div class="container header__inner">
+      <a class="brand" href="../index.html" aria-label="RedeGastro - início">
+        <img src="../assets/images/logo-redegastro.svg" alt="RedeGastro" width="214" height="58">
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="main-menu" aria-expanded="false" data-menu-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="main-menu" aria-label="Navegação principal" data-main-nav>
+        <a class="main-nav__link" href="../index.html">Início</a>
+        <a class="main-nav__link" href="profissionais.html">Profissionais</a>
+        <a class="main-nav__link" href="vagas.html">Vagas</a>
+        <a class="main-nav__link" href="../index.html#como-funciona">Como funciona</a>
+        <a class="main-nav__link" href="sobre.html">Sobre</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn--secondary" href="login.html">Entrar</a>
+        <a class="btn btn--primary" href="cadastro.html">Criar perfil</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="page-hero">
+      <div class="container page-hero__content">
+        <span class="badge badge--soft">Dados fictícios para demonstração</span>
+        <h1>Painel administrativo demonstrativo</h1>
+        <p>Painel administrativo demonstrativo do protótipo.</p>
+        <p class="notice">Nenhuma informação desta página vem de banco de dados real.</p>
+      </div>
+    </section>
+
+    <section class="section section--compact">
+      <div class="container">
+        <div class="dashboard-metrics">
+          <article class="metric-card">
+            <strong>120</strong>
+            <span>Total de profissionais</span>
+          </article>
+          <article class="metric-card">
+            <strong>45</strong>
+            <span>Total de restaurantes</span>
+          </article>
+          <article class="metric-card">
+            <strong>38</strong>
+            <span>Total de vagas</span>
+          </article>
+          <article class="metric-card">
+            <strong>80</strong>
+            <span>Contatos via WhatsApp</span>
+          </article>
+        </div>
+
+        <div class="admin-grid">
+          <section class="dashboard-card" aria-labelledby="grafico-admin">
+            <div class="section-heading section-heading--compact">
+              <div>
+                <span class="eyebrow">Visão geral</span>
+                <h2 id="grafico-admin">Atividade simulada</h2>
+              </div>
+            </div>
+
+            <div class="bar-chart" aria-label="Gráfico visual fictício de atividade da plataforma">
+              <div class="bar-chart__row" style="--bar-size: 92%;">
+                <span>Profissionais</span>
+                <div><i></i></div>
+                <strong>120</strong>
+              </div>
+              <div class="bar-chart__row" style="--bar-size: 64%;">
+                <span>Restaurantes</span>
+                <div><i></i></div>
+                <strong>45</strong>
+              </div>
+              <div class="bar-chart__row" style="--bar-size: 72%;">
+                <span>Vagas</span>
+                <div><i></i></div>
+                <strong>38</strong>
+              </div>
+              <div class="bar-chart__row" style="--bar-size: 82%;">
+                <span>WhatsApp</span>
+                <div><i></i></div>
+                <strong>80</strong>
+              </div>
+            </div>
+          </section>
+
+          <section class="dashboard-card dashboard-card--notice">
+            <h2>Aviso</h2>
+            <p>Dados fictícios para demonstração. Este painel não possui permissões reais, autenticação, moderação, relatórios, auditoria ou armazenamento.</p>
+          </section>
+        </div>
+
+        <div class="admin-tables">
+          <section class="dashboard-card" aria-labelledby="usuarios-recentes">
+            <div class="section-heading section-heading--compact">
+              <div>
+                <span class="eyebrow">Cadastros</span>
+                <h2 id="usuarios-recentes">Usuários recentes</h2>
+              </div>
+            </div>
+
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Bairro</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Lucas Almeida</td>
+                    <td>Profissional</td>
+                    <td>Centro</td>
+                    <td><span class="badge badge--status">Ativo</span></td>
+                  </tr>
+                  <tr>
+                    <td>Sabor &amp; Brasa</td>
+                    <td>Restaurante</td>
+                    <td>Centro</td>
+                    <td><span class="badge badge--soft">Demo</span></td>
+                  </tr>
+                  <tr>
+                    <td>Marina Souza</td>
+                    <td>Profissional</td>
+                    <td>Jardim dos Estados</td>
+                    <td><span class="badge badge--status">Ativo</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="dashboard-card" aria-labelledby="denuncias-admin">
+            <div class="section-heading section-heading--compact">
+              <div>
+                <span class="eyebrow">Segurança</span>
+                <h2 id="denuncias-admin">Denúncias</h2>
+              </div>
+            </div>
+
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Origem</th>
+                    <th scope="col">Motivo</th>
+                    <th scope="col">Prioridade</th>
+                    <th scope="col">Situação</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Vaga fictícia</td>
+                    <td>Informação incompleta</td>
+                    <td>Média</td>
+                    <td><span class="badge badge--soft">Em análise</span></td>
+                  </tr>
+                  <tr>
+                    <td>Perfil demonstrativo</td>
+                    <td>Foto pendente</td>
+                    <td>Baixa</td>
+                    <td><span class="badge badge--status">Resolvida</span></td>
+                  </tr>
+                  <tr>
+                    <td>Contato simulado</td>
+                    <td>Mensagem duplicada</td>
+                    <td>Baixa</td>
+                    <td><span class="badge badge--soft">Triagem</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="dashboard-card" aria-labelledby="vagas-destaque-admin">
+            <div class="section-heading section-heading--compact">
+              <div>
+                <span class="eyebrow">Operação</span>
+                <h2 id="vagas-destaque-admin">Vagas em destaque</h2>
+              </div>
+            </div>
+
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Vaga</th>
+                    <th scope="col">Restaurante</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Interesses</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Garçom para plantão noturno</td>
+                    <td>Sabor &amp; Brasa</td>
+                    <td>Plantão</td>
+                    <td>8</td>
+                  </tr>
+                  <tr>
+                    <td>Bartender para casamento</td>
+                    <td>Brinde Eventos</td>
+                    <td>Evento</td>
+                    <td>11</td>
+                  </tr>
+                  <tr>
+                    <td>Chapeiro para hamburgueria</td>
+                    <td>Brasa Burger</td>
+                    <td>Teste</td>
+                    <td>5</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div>
+        <a class="brand brand--footer" href="../index.html" aria-label="RedeGastro - início">
+          <img src="../assets/images/logo-redegastro.svg" alt="RedeGastro" width="194" height="52">
+        </a>
+        <p>A rede de talentos da gastronomia.</p>
+      </div>
+      <nav class="footer-links" aria-label="Links do rodapé">
+        <a href="profissionais.html">Profissionais</a>
+        <a href="vagas.html">Vagas</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="termos.html">Termos de uso</a>
+        <a href="privacidade.html">Política de privacidade</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <p>Este é um protótipo navegável da RedeGastro para validação da ideia. Nenhum dado é salvo ou processado de forma real.</p>
+      <p>Versão demonstrativa para GitHub Pages. <span data-current-year></span></p>
+    </div>
+  </footer>
+
+  <div class="toast-region" aria-live="polite" aria-atomic="true" data-toast-region></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/filters.js"></script>
+  <script src="../js/forms.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
