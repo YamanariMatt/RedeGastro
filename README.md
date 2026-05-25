@@ -47,6 +47,18 @@ A RedeGastro propõe conectar restaurantes a profissionais freelancers da gastro
 
 Nesta versão, todo esse fluxo é apenas simulado para fins de apresentação.
 
+## Revisão visual
+
+A interface do protótipo foi revisada para ficar mais limpa, moderna, responsiva e adequada ao contexto de gastronomia.
+
+A revisão visual manteve a estrutura original do projeto e reforçou:
+
+- Hierarquia mais clara no hero, listagens, dashboards e formulários;
+- Cards, botões, filtros e avisos de protótipo com aparência mais consistente;
+- Gradientes discretos e paleta escura quente, sem uso de preto puro como cor dominante;
+- Animações suaves e foco visível para melhorar a experiência de navegação;
+- Compatibilidade com GitHub Pages usando apenas HTML, CSS e JavaScript puro.
+
 ## Tecnologias utilizadas
 
 - HTML5
@@ -122,9 +134,9 @@ redegastro-prototipo/
 │   └── 404.html
 ├── assets/
 │   ├── images/
-│   │   ├── logo-redegastro.svg
-│   │   ├── favicon.svg
-│   │   └── og-image.svg
+│   │   ├── logo-redegastro.png
+│   │   ├── favicon.png
+│   │   └── og-image.png
 │   └── icons/
 │       └── placeholder.svg
 ├── css/
@@ -176,15 +188,6 @@ Paleta principal:
 
 ## Próximos passos
 
-- Criar a estrutura inicial de pastas;
-- Criar logo, favicon e imagem Open Graph em SVG;
-- Criar layout base com HTML semântico;
-- Criar estilos globais com variáveis CSS;
-- Criar dados fictícios em JavaScript;
-- Implementar listagens de profissionais e vagas;
-- Implementar filtros simulados;
-- Implementar formulários demonstrativos;
-- Preparar publicação no GitHub Pages;
 - Criar backend real futuramente;
 - Criar banco PostgreSQL;
 - Implementar autenticação Google;

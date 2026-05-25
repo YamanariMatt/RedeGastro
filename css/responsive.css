@@ -1,45 +1,131 @@
-@media (max-width: 1040px) {
+@media (max-width: 1200px) {
+  :root {
+    --container: 1040px;
+  }
+
+  .filters-grid,
+  .filters-grid--jobs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .filters-grid .btn,
+  .filters-grid--jobs .btn {
+    width: 100%;
+  }
+
+  .card-grid--professionals,
+  .card-grid--directory {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --container: 920px;
+  }
+
   .header-actions {
     display: none;
   }
 
-  .hero__grid,
-  .card-grid--jobs,
-  .card-grid--professionals,
-  .card-grid--directory {
-    grid-template-columns: repeat(2, 1fr);
+  .hero {
+    padding-top: 4rem;
   }
 
-  .hero__content {
-    grid-column: 1 / -1;
+  .hero__grid,
+  .dashboard-hero,
+  .dashboard-layout,
+  .admin-grid,
+  .profile-hero__grid,
+  .profile-layout,
+  .form-layout {
+    grid-template-columns: 1fr;
   }
 
   .hero-panel {
-    grid-column: 1 / -1;
-    max-width: 620px;
+    max-width: 680px;
   }
 
-  .metrics__grid {
+  .dashboard-sidebar,
+  .profile-sidebar,
+  .form-aside {
+    position: static;
+  }
+
+  .dashboard-actions,
+  .profile-actions {
+    justify-content: flex-start;
+  }
+
+  .card-grid--jobs,
+  .card-grid--professionals,
+  .card-grid--directory,
+  .steps,
+  .metrics__grid,
+  .dashboard-metrics {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .split-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading h2 {
+    font-size: 2.35rem;
   }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 768px) {
+  :root {
+    --container: 100%;
+  }
+
+  .container {
+    width: min(100% - 1.5rem, var(--container));
+  }
+
   .section {
     padding: 3.75rem 0;
   }
 
-  .hero__content h1 {
-    font-size: 3.35rem;
-  }
-
-  .section-heading h2,
-  .cta-panel h2 {
-    font-size: 2.2rem;
+  .section--compact {
+    padding: 2rem 0;
   }
 
   .header__inner {
-    min-height: 74px;
+    min-height: 68px;
+  }
+
+  .brand {
+    width: 176px;
+    height: 48px;
+    min-width: 176px;
+  }
+
+  .brand img {
+    height: 104px;
+    transform: translate(-15px, -28px);
+  }
+
+  .brand--footer {
+    width: 180px;
+    height: 48px;
+    min-width: 180px;
+  }
+
+  .brand--footer img {
+    height: 104px;
+    transform: translate(-15px, -28px);
+  }
+
+  .auth-logo {
+    width: 210px;
+    height: 56px;
+  }
+
+  .auth-logo img {
+    height: 122px;
+    transform: translate(-18px, -33px);
   }
 
   .menu-toggle {
@@ -48,141 +134,81 @@
 
   .main-nav {
     position: fixed;
-    inset: 74px 1rem auto 1rem;
-    display: none;
+    top: 76px;
+    right: 0.75rem;
+    left: 0.75rem;
+    display: flex;
     flex-direction: column;
     align-items: stretch;
-    padding: 0.8rem;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    background: var(--color-card);
-    box-shadow: var(--shadow-soft);
+    gap: 0.15rem;
+    padding: 0.75rem;
+    pointer-events: none;
+    background:
+      linear-gradient(180deg, rgba(255, 247, 237, 0.04), rgba(255, 247, 237, 0.02)),
+      rgba(59, 36, 24, 0.98);
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-hover);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:
+      opacity var(--transition),
+      transform var(--transition);
   }
 
   .main-nav.is-open {
-    display: flex;
+    pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideDown 180ms ease both;
   }
 
   .main-nav__link {
-    padding: 0.9rem;
+    border-radius: var(--radius-sm);
+    padding: 0.92rem 1rem;
+  }
+
+  .hero__content h1 {
+    font-size: 3rem;
+  }
+
+  .hero__lead,
+  .page-hero p {
+    font-size: 1rem;
+  }
+
+  .page-hero {
+    padding: 3.4rem 0 2rem;
+  }
+
+  .page-hero h1,
+  .profile-hero h1 {
+    font-size: 2.45rem;
   }
 
   .quick-search,
-  .admin-grid,
-  .dashboard-hero,
-  .dashboard-layout,
   .filters-grid,
-  .form-layout,
-  .profile-hero__grid,
-  .profile-layout,
-  .steps,
-  .split-grid,
-  .footer__grid {
+  .filters-grid--jobs,
+  .footer__grid,
+  .form-grid,
+  .availability-grid,
+  .criteria-list,
+  .work-grid {
     grid-template-columns: 1fr;
-  }
-
-  .profile-sidebar {
-    position: static;
-  }
-
-  .form-aside {
-    position: static;
-  }
-
-  .dashboard-sidebar {
-    position: static;
-  }
-
-  .dashboard-actions {
-    justify-content: flex-start;
-  }
-
-  .profile-actions {
-    justify-content: flex-start;
-  }
-
-  .profile-hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .page-hero h1 {
-    font-size: 2.65rem;
   }
 
   .section-heading {
     display: grid;
     align-items: start;
-  }
-
-  .results-toolbar {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .footer-links {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 640px) {
-  .container {
-    width: min(100% - 1.25rem, var(--container));
-  }
-
-  .brand {
-    min-width: 154px;
-  }
-
-  .hero {
-    padding-top: 3rem;
-  }
-
-  .hero__content h1 {
-    font-size: 2.45rem;
+    gap: 0.8rem;
   }
 
   .section-heading h2,
   .cta-panel h2 {
-    font-size: 1.85rem;
+    font-size: 2rem;
   }
 
-  .page-hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero__grid,
-  .card-grid--jobs,
-  .card-grid--professionals,
-  .card-grid--directory,
-  .dashboard-metrics,
-  .dashboard-list__item,
-  .demo-access__grid,
-  .form-grid,
-  .availability-grid,
-  .criteria-list,
-  .work-grid,
-  .metrics__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero__actions,
-  .info-card__footer {
-    flex-direction: column;
-  }
-
-  .hero__actions .btn,
-  .info-card__footer .btn,
-  .quick-search .btn,
-  .cta-panel .btn {
-    width: 100%;
-  }
-
-  .hero-panel__top {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .hero-panel__profile {
+  .results-toolbar {
     align-items: flex-start;
     flex-direction: column;
   }
@@ -192,17 +218,15 @@
     flex-direction: column;
   }
 
-  .avatar--xl {
-    width: 88px;
-    height: 88px;
-    font-size: 1.55rem;
-  }
-
-  .profile-actions .btn {
+  .profile-actions .btn,
+  .dashboard-actions .btn {
     width: 100%;
   }
 
-  .dashboard-actions .btn,
+  .dashboard-list__item {
+    grid-template-columns: 1fr;
+  }
+
   .dashboard-list__actions,
   .dashboard-list__actions .btn {
     width: 100%;
@@ -217,11 +241,126 @@
     text-align: left;
   }
 
-  .metric-card strong {
-    font-size: 1.75rem;
+  .footer-links {
+    grid-template-columns: 1fr;
   }
 
-  .cta-panel {
-    padding: 1.35rem;
+  .table-wrap {
+    overflow: visible;
+  }
+
+  .data-table,
+  .data-table thead,
+  .data-table tbody,
+  .data-table tr,
+  .data-table th,
+  .data-table td {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .data-table thead {
+    display: none;
+  }
+
+  .data-table tr {
+    margin-bottom: 0.85rem;
+    padding: 0.85rem;
+    background: rgba(31, 18, 12, 0.28);
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-lg);
+  }
+
+  .data-table td {
+    padding: 0.3rem 0;
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: min(100% - 1rem, var(--container));
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .hero {
+    padding-top: 3rem;
+  }
+
+  .hero__grid,
+  .card-grid--jobs,
+  .card-grid--professionals,
+  .card-grid--directory,
+  .steps,
+  .metrics__grid,
+  .dashboard-metrics,
+  .demo-access__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__content h1 {
+    font-size: 2.35rem;
+  }
+
+  .page-hero h1,
+  .profile-hero h1 {
+    font-size: 2rem;
+  }
+
+  .section-heading h2,
+  .cta-panel h2 {
+    font-size: 1.72rem;
+  }
+
+  .hero__actions,
+  .info-card__footer {
+    flex-direction: column;
+  }
+
+  .hero__actions .btn,
+  .info-card__footer .btn,
+  .quick-search .btn,
+  .cta-panel .btn,
+  .filter-panel .btn {
+    width: 100%;
+  }
+
+  .hero-panel,
+  .cta-panel,
+  .dashboard-card,
+  .profile-panel,
+  .profile-section,
+  .form-card,
+  .form-aside,
+  .filter-panel,
+  .info-card {
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+  }
+
+  .hero-panel__top,
+  .hero-panel__profile,
+  .review-card__top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .avatar--xl {
+    width: 88px;
+    height: 88px;
+    font-size: 1.55rem;
+  }
+
+  .metric-card strong {
+    font-size: 1.65rem;
+  }
+
+  .btn {
+    min-height: 48px;
+    white-space: normal;
   }
 }
