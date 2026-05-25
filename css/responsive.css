@@ -68,6 +68,8 @@
   }
 
   .quick-search,
+  .dashboard-hero,
+  .dashboard-layout,
   .filters-grid,
   .form-layout,
   .profile-hero__grid,
@@ -84,6 +86,14 @@
 
   .form-aside {
     position: static;
+  }
+
+  .dashboard-sidebar {
+    position: static;
+  }
+
+  .dashboard-actions {
+    justify-content: flex-start;
   }
 
   .profile-actions {
@@ -143,6 +153,8 @@
   .card-grid--jobs,
   .card-grid--professionals,
   .card-grid--directory,
+  .dashboard-metrics,
+  .dashboard-list__item,
   .form-grid,
   .availability-grid,
   .criteria-list,
@@ -186,6 +198,13 @@
 
   .profile-actions .btn {
     width: 100%;
+  }
+
+  .dashboard-actions .btn,
+  .dashboard-list__actions,
+  .dashboard-list__actions .btn {
+    width: 100%;
+    justify-items: stretch;
   }
 
   .metric-card strong {
