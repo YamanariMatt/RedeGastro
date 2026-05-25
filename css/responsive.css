@@ -5,7 +5,8 @@
 
   .hero__grid,
   .card-grid--jobs,
-  .card-grid--professionals {
+  .card-grid--professionals,
+  .card-grid--directory {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -67,15 +68,25 @@
   }
 
   .quick-search,
+  .filters-grid,
   .steps,
   .split-grid,
   .footer__grid {
     grid-template-columns: 1fr;
   }
 
+  .page-hero h1 {
+    font-size: 2.65rem;
+  }
+
   .section-heading {
     display: grid;
     align-items: start;
+  }
+
+  .results-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .footer-links {
@@ -105,9 +116,14 @@
     font-size: 1.85rem;
   }
 
+  .page-hero h1 {
+    font-size: 2.2rem;
+  }
+
   .hero__grid,
   .card-grid--jobs,
   .card-grid--professionals,
+  .card-grid--directory,
   .metrics__grid {
     grid-template-columns: 1fr;
   }

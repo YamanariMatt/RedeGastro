@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Profissionais freelancers fictícios da gastronomia disponíveis para restaurantes, eventos e plantões no protótipo RedeGastro.">
+  <meta property="og:title" content="RedeGastro | Profissionais disponíveis">
+  <meta property="og:description" content="Encontre freelancers avaliados para restaurantes, eventos e plantões. Dados fictícios para demonstração.">
+  <meta property="og:image" content="../assets/images/og-image.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <title>RedeGastro | Profissionais disponíveis</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+</head>
+<body data-page="professionals">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" data-header>
+    <div class="container header__inner">
+      <a class="brand" href="../index.html" aria-label="RedeGastro - início">
+        <img src="../assets/images/logo-redegastro.svg" alt="RedeGastro" width="214" height="58">
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="main-menu" aria-expanded="false" data-menu-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="main-menu" aria-label="Navegação principal" data-main-nav>
+        <a class="main-nav__link" href="../index.html">Início</a>
+        <a class="main-nav__link is-active" href="profissionais.html">Profissionais</a>
+        <a class="main-nav__link" href="vagas.html">Vagas</a>
+        <a class="main-nav__link" href="../index.html#como-funciona">Como funciona</a>
+        <a class="main-nav__link" href="sobre.html">Sobre</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn--secondary" href="login.html">Entrar</a>
+        <a class="btn btn--primary" href="cadastro.html">Criar perfil</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="page-hero">
+      <div class="container page-hero__content">
+        <span class="badge badge--soft">Informações simuladas para validação da ideia</span>
+        <h1>Profissionais disponíveis</h1>
+        <p>Encontre freelancers avaliados para restaurantes, eventos e plantões.</p>
+        <p class="notice">Dados fictícios para demonstração.</p>
+      </div>
+    </section>
+
+    <section class="section section--compact">
+      <div class="container">
+        <form class="filter-panel" data-professionals-filters>
+          <div class="filters-grid">
+            <div class="form-field">
+              <label for="professional-search">Busca por nome ou cargo</label>
+              <input id="professional-search" type="search" placeholder="Ex.: garçom, barista, Lucas" data-filter-search>
+            </div>
+
+            <div class="form-field">
+              <label for="professional-role">Cargo</label>
+              <select id="professional-role" data-filter-role>
+                <option value="">Todos</option>
+                <option>Garçom</option>
+                <option>Cumim</option>
+                <option>Cozinheiro</option>
+                <option>Auxiliar de cozinha</option>
+                <option>Barista</option>
+                <option>Bartender</option>
+                <option>Sushiman</option>
+                <option>Pizzaiolo</option>
+                <option>Confeiteira</option>
+                <option>Padeiro</option>
+                <option>Chapeiro</option>
+                <option>Atendente</option>
+                <option>Freelancer para buffet</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="professional-neighborhood">Bairro</label>
+              <select id="professional-neighborhood" data-filter-neighborhood>
+                <option value="">Todos</option>
+                <option>Centro</option>
+                <option>Jardim dos Estados</option>
+                <option>Vila Planalto</option>
+                <option>Tiradentes</option>
+                <option>Santa Fé</option>
+                <option>Chácara Cachoeira</option>
+                <option>Carandá Bosque</option>
+                <option>Jardim América</option>
+                <option>Moreninhas</option>
+                <option>Monte Castelo</option>
+                <option>São Francisco</option>
+                <option>Vila Carlota</option>
+                <option>Jardim Panamá</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="professional-availability">Disponibilidade</label>
+              <select id="professional-availability" data-filter-availability>
+                <option value="">Todas</option>
+                <option value="today">Disponíveis hoje</option>
+                <option value="tomorrow">Disponíveis amanhã</option>
+                <option value="weekend">Finais de semana</option>
+                <option value="nights">Noites e eventos</option>
+                <option value="morning">Manhãs</option>
+                <option value="events">Eventos</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="professional-sort">Ordenar por</label>
+              <select id="professional-sort" data-filter-sort>
+                <option value="rating">Melhor avaliação</option>
+                <option value="reviews">Mais avaliações</option>
+                <option value="recent">Mais recentes</option>
+                <option value="today">Disponíveis hoje</option>
+              </select>
+            </div>
+
+            <button class="btn btn--secondary" type="reset">Limpar</button>
+          </div>
+        </form>
+
+        <div class="results-toolbar" aria-live="polite">
+          <strong data-professionals-count>0 profissionais encontrados</strong>
+          <span>Protótipo: favoritos ficam salvos apenas neste navegador.</span>
+        </div>
+
+        <div class="card-grid card-grid--directory" id="professionals-grid" aria-live="polite"></div>
+
+        <div class="empty-state" data-professionals-empty hidden>
+          Nenhum profissional encontrado com esses filtros. Ajuste a busca para visualizar outros exemplos fictícios.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div>
+        <a class="brand brand--footer" href="../index.html" aria-label="RedeGastro - início">
+          <img src="../assets/images/logo-redegastro.svg" alt="RedeGastro" width="194" height="52">
+        </a>
+        <p>A rede de talentos da gastronomia.</p>
+      </div>
+      <nav class="footer-links" aria-label="Links do rodapé">
+        <a href="profissionais.html">Profissionais</a>
+        <a href="vagas.html">Vagas</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="termos.html">Termos de uso</a>
+        <a href="privacidade.html">Política de privacidade</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <p>Este é um protótipo navegável da RedeGastro para validação da ideia. Nenhum dado é salvo ou processado de forma real.</p>
+      <p>Versão demonstrativa para GitHub Pages. <span data-current-year></span></p>
+    </div>
+  </footer>
+
+  <div class="toast-region" aria-live="polite" aria-atomic="true" data-toast-region></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/filters.js"></script>
+  <script src="../js/forms.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

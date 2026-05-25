@@ -22,6 +22,10 @@
       window.RedeGastroFilters.renderHomeHighlights();
     }
 
+    if (page === "professionals" && window.RedeGastroFilters) {
+      window.RedeGastroFilters.initProfessionalsPage();
+    }
+
     updateFooterYear();
   }
 
