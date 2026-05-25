@@ -69,10 +69,24 @@
 
   .quick-search,
   .filters-grid,
+  .profile-hero__grid,
+  .profile-layout,
   .steps,
   .split-grid,
   .footer__grid {
     grid-template-columns: 1fr;
+  }
+
+  .profile-sidebar {
+    position: static;
+  }
+
+  .profile-actions {
+    justify-content: flex-start;
+  }
+
+  .profile-hero h1 {
+    font-size: 2.5rem;
   }
 
   .page-hero h1 {
@@ -124,6 +138,9 @@
   .card-grid--jobs,
   .card-grid--professionals,
   .card-grid--directory,
+  .availability-grid,
+  .criteria-list,
+  .work-grid,
   .metrics__grid {
     grid-template-columns: 1fr;
   }
@@ -148,6 +165,21 @@
   .hero-panel__profile {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .profile-hero__identity {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .avatar--xl {
+    width: 88px;
+    height: 88px;
+    font-size: 1.55rem;
+  }
+
+  .profile-actions .btn {
+    width: 100%;
   }
 
   .metric-card strong {
