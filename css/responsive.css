@@ -103,8 +103,8 @@
   }
 
   .brand img {
-    height: 104px;
-    transform: translate(-15px, -28px);
+    width: 100%;
+    height: 100%;
   }
 
   .brand--footer {
@@ -114,8 +114,8 @@
   }
 
   .brand--footer img {
-    height: 104px;
-    transform: translate(-15px, -28px);
+    width: 100%;
+    height: 100%;
   }
 
   .auth-logo {
@@ -124,8 +124,8 @@
   }
 
   .auth-logo img {
-    height: 122px;
-    transform: translate(-18px, -33px);
+    width: 100%;
+    height: 100%;
   }
 
   .menu-toggle {
