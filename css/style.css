@@ -760,7 +760,7 @@ button {
 }
 
 .auth-card {
-  width: min(100%, 460px);
+  width: min(100%, 500px);
   box-shadow: var(--shadow-card);
 }
 
@@ -816,8 +816,13 @@ button {
 }
 
 .auth-note {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 0.35rem;
   margin: 1rem 0 0;
   color: var(--color-beige);
+  font-size: 0.92rem;
   text-align: center;
 }
 
@@ -828,21 +833,36 @@ button {
 
 .demo-access {
   margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(255, 247, 237, 0.1);
+  padding: 0.95rem;
+  border: 1px solid rgba(255, 247, 237, 0.08);
+  border-radius: var(--radius-lg);
+  background: rgba(31, 18, 12, 0.24);
 }
 
 .demo-access h2 {
   margin: 0 0 0.75rem;
   color: var(--color-beige);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   line-height: 1.2;
 }
 
 .demo-access__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.6rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.demo-access__grid .btn {
+  width: 100%;
+  min-height: 42px;
+  border-radius: var(--radius-sm);
+  padding: 0.68rem 0.85rem;
+  font-size: 0.86rem;
+  white-space: normal;
+}
+
+.demo-access__grid .btn:last-child {
+  grid-column: 1 / -1;
 }
 
 .dashboard-hero {

@@ -297,7 +297,10 @@
   .card-grid--directory,
   .steps,
   .metrics__grid,
-  .dashboard-metrics,
+  .dashboard-metrics {
+    grid-template-columns: 1fr;
+  }
+
   .demo-access__grid {
     grid-template-columns: 1fr;
   }
