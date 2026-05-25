@@ -26,6 +26,10 @@
       window.RedeGastroFilters.initProfessionalsPage();
     }
 
+    if (page === "jobs" && window.RedeGastroFilters) {
+      window.RedeGastroFilters.initJobsPage();
+    }
+
     updateFooterYear();
   }
 

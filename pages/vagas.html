@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vagas e freelas fictícios para profissionais da gastronomia no protótipo RedeGastro.">
+  <meta property="og:title" content="RedeGastro | Vagas e freelas disponíveis">
+  <meta property="og:description" content="Veja oportunidades fictícias para diárias, eventos, plantões e vagas recorrentes.">
+  <meta property="og:image" content="../assets/images/og-image.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <title>RedeGastro | Vagas e freelas disponíveis</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+</head>
+<body data-page="jobs">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" data-header>
+    <div class="container header__inner">
+      <a class="brand" href="../index.html" aria-label="RedeGastro - início">
+        <img src="../assets/images/logo-redegastro.svg" alt="RedeGastro" width="214" height="58">
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="main-menu" aria-expanded="false" data-menu-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="main-menu" aria-label="Navegação principal" data-main-nav>
+        <a class="main-nav__link" href="../index.html">Início</a>
+        <a class="main-nav__link" href="profissionais.html">Profissionais</a>
+        <a class="main-nav__link is-active" href="vagas.html">Vagas</a>
+        <a class="main-nav__link" href="../index.html#como-funciona">Como funciona</a>
+        <a class="main-nav__link" href="sobre.html">Sobre</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn--secondary" href="login.html">Entrar</a>
+        <a class="btn btn--primary" href="cadastro.html">Criar perfil</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="page-hero">
+      <div class="container page-hero__content">
+        <span class="badge badge--soft">Informações simuladas para validação da ideia</span>
+        <h1>Vagas e freelas disponíveis</h1>
+        <p>Veja oportunidades para diárias, eventos, plantões e vagas recorrentes.</p>
+        <p class="notice">As vagas exibidas são exemplos fictícios.</p>
+      </div>
+    </section>
+
+    <section class="section section--compact">
+      <div class="container">
+        <form class="filter-panel" data-jobs-filters>
+          <div class="filters-grid filters-grid--jobs">
+            <div class="form-field">
+              <label for="job-search">Busca por cargo ou restaurante</label>
+              <input id="job-search" type="search" placeholder="Ex.: garçom, buffet, cafeteria" data-job-search>
+            </div>
+
+            <div class="form-field">
+              <label for="job-role">Cargo</label>
+              <select id="job-role" data-job-role>
+                <option value="">Todos</option>
+                <option>Garçom</option>
+                <option>Cumim</option>
+                <option>Cozinheiro</option>
+                <option>Auxiliar de cozinha</option>
+                <option>Barista</option>
+                <option>Bartender</option>
+                <option>Sushiman</option>
+                <option>Pizzaiolo</option>
+                <option>Confeiteira</option>
+                <option>Padeiro</option>
+                <option>Chapeiro</option>
+                <option>Atendente</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="job-type">Tipo de vaga</label>
+              <select id="job-type" data-job-type>
+                <option value="">Todos</option>
+                <option>Diária</option>
+                <option>Evento</option>
+                <option>Plantão</option>
+                <option>Recorrente</option>
+                <option>Teste para efetivação</option>
+                <option>Vaga definitiva</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="job-neighborhood">Bairro</label>
+              <select id="job-neighborhood" data-job-neighborhood>
+                <option value="">Todos</option>
+                <option>Centro</option>
+                <option>Jardim América</option>
+                <option>Chácara Cachoeira</option>
+                <option>Santa Fé</option>
+                <option>Tiradentes</option>
+                <option>Parque dos Poderes</option>
+                <option>Carandá Bosque</option>
+                <option>Vila Carlota</option>
+                <option>Monte Castelo</option>
+                <option>Jardim dos Estados</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="job-urgency">Urgência</label>
+              <select id="job-urgency" data-job-urgency>
+                <option value="">Todas</option>
+                <option value="urgent">Urgentes</option>
+                <option value="regular">Sem urgência</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="job-sort">Ordenar por</label>
+              <select id="job-sort" data-job-sort>
+                <option value="urgent">Urgentes primeiro</option>
+                <option value="value">Maior valor</option>
+                <option value="recent">Mais recentes</option>
+              </select>
+            </div>
+
+            <button class="btn btn--secondary" type="reset">Limpar</button>
+          </div>
+        </form>
+
+        <div class="results-toolbar" aria-live="polite">
+          <strong data-jobs-count>0 vagas encontradas</strong>
+          <span>Protótipo: interesse e WhatsApp são apenas simulações.</span>
+        </div>
+
+        <div class="card-grid card-grid--directory" id="jobs-grid" aria-live="polite"></div>
+
+        <div class="empty-state" data-jobs-empty hidden>
+          Nenhuma vaga encontrada com esses filtros. Ajuste a busca para visualizar outros exemplos fictícios.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div>
+        <a class="brand brand--footer" href="../index.html" aria-label="RedeGastro - início">
+          <img src="../assets/images/logo-redegastro.svg" alt="RedeGastro" width="194" height="52">
+        </a>
+        <p>A rede de talentos da gastronomia.</p>
+      </div>
+      <nav class="footer-links" aria-label="Links do rodapé">
+        <a href="profissionais.html">Profissionais</a>
+        <a href="vagas.html">Vagas</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="termos.html">Termos de uso</a>
+        <a href="privacidade.html">Política de privacidade</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <p>Este é um protótipo navegável da RedeGastro para validação da ideia. Nenhum dado é salvo ou processado de forma real.</p>
+      <p>Versão demonstrativa para GitHub Pages. <span data-current-year></span></p>
+    </div>
+  </footer>
+
+  <div class="toast-region" aria-live="polite" aria-atomic="true" data-toast-region></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/filters.js"></script>
+  <script src="../js/forms.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

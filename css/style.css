@@ -508,6 +508,10 @@ button {
   align-items: end;
 }
 
+.filters-grid--jobs {
+  grid-template-columns: 1.4fr repeat(5, minmax(130px, 1fr)) auto;
+}
+
 .results-toolbar {
   display: flex;
   align-items: center;

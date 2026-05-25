@@ -78,11 +78,12 @@ window.RedeGastroFilters = (function () {
     var prefix = getPagePrefix();
 
     return [
-      '<article class="info-card job-card">',
+      '<article class="info-card job-card" id="vaga-' + escapeHtml(job.id) + '">',
       '  <div class="info-card__top">',
       "    <div>",
       job.urgent ? '      <span class="badge badge--urgent">Urgente</span>' : "",
-      "      <h3>" + escapeHtml(job.title) + "</h3>",
+      "      <h3>" + escapeHtml(job.role) + "</h3>",
+      '      <p class="text-beige">' + escapeHtml(job.title) + "</p>",
       "    </div>",
       '    <span class="rating">' + escapeHtml(job.value) + "</span>",
       "  </div>",
@@ -94,10 +95,38 @@ window.RedeGastroFilters = (function () {
       "  <p>" + escapeHtml(job.description) + "</p>",
       '  <div class="info-card__footer">',
       '    <button class="btn btn--primary" type="button" data-interest-message="' + escapeHtml(jobInterestMessage(job)) + '">Tenho interesse</button>',
-      '    <a class="btn btn--secondary" href="' + prefix + 'vagas.html">Ver detalhes</a>',
+      '    <a class="btn btn--secondary" href="' + prefix + 'vagas.html#vaga-' + escapeHtml(job.id) + '">Ver detalhes</a>',
       "  </div>",
       "</article>"
     ].join("");
+  }
+
+  function sortJobs(jobs, sortBy) {
+    var list = jobs.slice();
+
+    if (sortBy === "value") {
+      return list.sort(function (a, b) {
+        return b.valueAmount - a.valueAmount;
+      });
+    }
+
+    if (sortBy === "recent") {
+      return list.sort(function (a, b) {
+        return new Date(b.createdAt) - new Date(a.createdAt);
+      });
+    }
+
+    return list.sort(function (a, b) {
+      if (a.urgent && !b.urgent) {
+        return -1;
+      }
+
+      if (!a.urgent && b.urgent) {
+        return 1;
+      }
+
+      return new Date(b.createdAt) - new Date(a.createdAt);
+    });
   }
 
   function sortProfessionals(professionals, sortBy) {
@@ -232,6 +261,94 @@ window.RedeGastroFilters = (function () {
     });
   }
 
+  function getJobFilterState(form) {
+    return {
+      search: normalize(form.querySelector("[data-job-search]").value),
+      role: form.querySelector("[data-job-role]").value,
+      type: form.querySelector("[data-job-type]").value,
+      neighborhood: form.querySelector("[data-job-neighborhood]").value,
+      urgency: form.querySelector("[data-job-urgency]").value,
+      sort: form.querySelector("[data-job-sort]").value || "urgent"
+    };
+  }
+
+  function filterJobs(jobs, state) {
+    return jobs.filter(function (job) {
+      var searchable = normalize([
+        job.title,
+        job.role,
+        job.restaurant,
+        job.neighborhood,
+        job.type,
+        job.description
+      ].join(" "));
+
+      if (state.search && searchable.indexOf(state.search) === -1) {
+        return false;
+      }
+
+      if (state.role && job.role !== state.role) {
+        return false;
+      }
+
+      if (state.type && job.type !== state.type) {
+        return false;
+      }
+
+      if (state.neighborhood && job.neighborhood !== state.neighborhood) {
+        return false;
+      }
+
+      if (state.urgency === "urgent" && !job.urgent) {
+        return false;
+      }
+
+      if (state.urgency === "regular" && job.urgent) {
+        return false;
+      }
+
+      return true;
+    });
+  }
+
+  function updateJobsResults(form, grid, count, empty) {
+    var data = window.RedeGastroData || {};
+    var state = getJobFilterState(form);
+    var filtered = sortJobs(filterJobs(data.jobs || [], state), state.sort);
+    var label = filtered.length === 1 ? "1 vaga encontrada" : filtered.length + " vagas encontradas";
+
+    grid.innerHTML = filtered.map(createJobCard).join("");
+    count.textContent = label;
+    empty.hidden = filtered.length > 0;
+  }
+
+  function initJobsPage() {
+    var form = document.querySelector("[data-jobs-filters]");
+    var grid = document.getElementById("jobs-grid");
+    var count = document.querySelector("[data-jobs-count]");
+    var empty = document.querySelector("[data-jobs-empty]");
+
+    if (!form || !grid || !count || !empty) {
+      return;
+    }
+
+    updateJobsResults(form, grid, count, empty);
+
+    form.addEventListener("input", function () {
+      updateJobsResults(form, grid, count, empty);
+    });
+
+    form.addEventListener("change", function () {
+      updateJobsResults(form, grid, count, empty);
+    });
+
+    form.addEventListener("reset", function () {
+      window.setTimeout(function () {
+        updateJobsResults(form, grid, count, empty);
+      }, 0);
+    });
+  }
+
   function renderHomeHighlights() {
     var data = window.RedeGastroData || {};
     var jobsContainer = document.getElementById("urgent-jobs");
@@ -265,6 +382,7 @@ window.RedeGastroFilters = (function () {
   return {
     createJobCard: createJobCard,
     createProfessionalCard: createProfessionalCard,
+    initJobsPage: initJobsPage,
     initProfessionalsPage: initProfessionalsPage,
     renderHomeHighlights: renderHomeHighlights
   };
