@@ -457,6 +457,124 @@ button {
   padding: 0.8rem 0.9rem;
 }
 
+.form-field input.is-invalid,
+.form-field select.is-invalid,
+.checkbox-field input.is-invalid {
+  border-color: var(--color-red);
+}
+
+.field-error {
+  min-height: 1.2rem;
+  color: #FCA5A5;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.form-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 340px) 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.form-aside,
+.form-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-card);
+}
+
+.form-aside {
+  position: sticky;
+  top: 98px;
+  padding: 1.25rem;
+}
+
+.form-aside h2,
+.form-card__header h2 {
+  margin: 0;
+  line-height: 1.15;
+}
+
+.form-aside p,
+.form-card__header p {
+  margin: 0.6rem 0 0;
+  color: var(--color-beige);
+}
+
+.account-switch {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 1.25rem;
+}
+
+.account-option {
+  min-height: 48px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-cream);
+  background: rgba(31, 18, 12, 0.36);
+  font-weight: 900;
+  text-align: left;
+  padding: 0.85rem 1rem;
+}
+
+.account-option.is-active {
+  color: var(--color-bg-dark);
+  background: var(--color-orange);
+  border-color: var(--color-orange);
+}
+
+.form-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-card {
+  padding: 1.25rem;
+}
+
+.form-card[hidden] {
+  display: none;
+}
+
+.form-card__header {
+  margin-bottom: 1rem;
+}
+
+.form-alert {
+  margin-bottom: 1rem;
+  border: 1px solid rgba(239, 68, 68, 0.32);
+  border-radius: var(--radius-sm);
+  color: #FFE8DD;
+  background: rgba(239, 68, 68, 0.12);
+  padding: 0.75rem 0.9rem;
+  font-weight: 900;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem 1rem;
+}
+
+.checkbox-field {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  margin: 1rem 0 0.25rem;
+  color: var(--color-beige);
+  font-weight: 700;
+}
+
+.checkbox-field input {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  margin-top: 0.2rem;
+  accent-color: var(--color-orange);
+}
+
 .page-hero {
   padding: 4.5rem 0 2.5rem;
 }

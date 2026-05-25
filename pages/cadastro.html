@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cadastro simulado da RedeGastro para profissionais e restaurantes no protótipo navegável.">
+  <meta property="og:title" content="RedeGastro | Cadastro simulado">
+  <meta property="og:description" content="Crie um acesso demonstrativo no protótipo RedeGastro. Nenhum dado é salvo.">
+  <meta property="og:image" content="../assets/images/og-image.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <title>RedeGastro | Criar acesso</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+</head>
+<body data-page="signup">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" data-header>
+    <div class="container header__inner">
+      <a class="brand" href="../index.html" aria-label="RedeGastro - início">
+        <img src="../assets/images/logo-redegastro.svg" alt="RedeGastro" width="214" height="58">
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="main-menu" aria-expanded="false" data-menu-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="main-menu" aria-label="Navegação principal" data-main-nav>
+        <a class="main-nav__link" href="../index.html">Início</a>
+        <a class="main-nav__link" href="profissionais.html">Profissionais</a>
+        <a class="main-nav__link" href="vagas.html">Vagas</a>
+        <a class="main-nav__link" href="../index.html#como-funciona">Como funciona</a>
+        <a class="main-nav__link" href="sobre.html">Sobre</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn--secondary" href="login.html">Entrar</a>
+        <a class="btn btn--primary" href="cadastro.html">Criar perfil</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="page-hero">
+      <div class="container page-hero__content">
+        <span class="badge badge--soft">Cadastro demonstrativo</span>
+        <h1>Crie seu acesso na RedeGastro</h1>
+        <p>Este cadastro é apenas uma simulação do protótipo. Não envie dados reais sensíveis.</p>
+        <p class="notice">Protótipo: não envie dados reais.</p>
+      </div>
+    </section>
+
+    <section class="section section--compact">
+      <div class="container form-layout">
+        <aside class="form-aside">
+          <h2>Escolha o tipo de conta</h2>
+          <p>Os formulários abaixo servem apenas para testar o fluxo visual da RedeGastro.</p>
+
+          <div class="account-switch" role="group" aria-label="Tipo de conta">
+            <button class="account-option is-active" type="button" data-account-option="professional" aria-pressed="true">Sou profissional</button>
+            <button class="account-option" type="button" data-account-option="restaurant" aria-pressed="false">Sou restaurante</button>
+          </div>
+        </aside>
+
+        <div class="form-stack">
+          <form class="form-card" data-account-panel="professional" data-prototype-form novalidate>
+            <div class="form-card__header">
+              <span class="eyebrow">Profissional</span>
+              <h2>Crie um perfil profissional simulado</h2>
+              <p>Campos obrigatórios são validados apenas no navegador.</p>
+            </div>
+
+            <div class="form-alert">Protótipo: não envie dados reais.</div>
+
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="professional-name">Nome completo</label>
+                <input id="professional-name" name="name" type="text" autocomplete="name" required>
+                <small class="field-error" data-error-for="professional-name"></small>
+              </div>
+
+              <div class="form-field">
+                <label for="professional-email">E-mail</label>
+                <input id="professional-email" name="email" type="email" autocomplete="email" required data-validation="email">
+                <small class="field-error" data-error-for="professional-email"></small>
+              </div>
+
+              <div class="form-field">
+                <label for="professional-whatsapp">WhatsApp</label>
+                <input id="professional-whatsapp" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel" required data-validation="whatsapp" data-mask="whatsapp">
+                <small class="field-error" data-error-for="professional-whatsapp"></small>
+              </div>
+
+              <div class="form-field">
+                <label for="professional-cpf">CPF</label>
+                <input id="professional-cpf" name="cpf" type="text" inputmode="numeric" required data-validation="cpf" data-mask="cpf">
+                <small class="field-error" data-error-for="professional-cpf"></small>
+              </div>
+
+              <div class="form-field">
+                <label for="professional-role">Cargo principal</label>
+                <select id="professional-role" name="role" required>
+                  <option value="">Selecione</option>
+                  <option>Garçom</option>
+                  <option>Cumim</option>
+                  <option>Cozinheiro</option>
+                  <option>Auxiliar de cozinha</option>
+                  <option>Barista</option>
+                  <option>Bartender</option>
+                  <option>Sushiman</option>
+                  <option>Pizzaiolo</option>
+                  <option>Confeiteira</option>
+                  <option>Padeiro</option>
+                  <option>Chapeiro</option>
+                  <option>Atendente</option>
+                  <option>Freelancer para buffet</option>
+                </select>
+                <small class="field-error" data-error-for="professional-role"></small>
+              </div>
+
+              <div class="form-field">
+                <label for="professional-neighborhood">Bairro</label>
+                <input id="professional-neighborhood" name="neighborhood" type="text" required>
+                <small class="field-error" data-error-for="professional-neighborhood"></small>
+              </div>
+
+              <div class="form-field">
+                <label for="professional-experience">Experiência</label>
+                <select id="professional-experience" name="experience" required>
+                  <option value="">Selecione</option>
+                  <option>Menos de 1 ano</option>
+                  <option>1 a 2 anos</option>
+                  <option>3 a 5 anos</option>
+                  <option>Mais de 5 anos</option>
+                </select>
+                <small class="field-error" data-error-for="professional-experience"></small>
+              </div>
+
+              <div class="form-field">
+                <label for="professional-availability">Disponibilidade</label>
+                <select id="professional-availability" name="availability" required>
+                  <option value="">Selecione</option>
+                  <option>Disponível hoje</option>
+                  <option>Disponível amanhã</option>
+                  <option>Manhãs</option>
+                  <option>Noites e eventos</option>
+                  <option>Finais de semana</option>
+                </select>
+                <small class="field-error" data-error-for="professional-availability"></small>
+              </div>
+            </div>
+
+            <label class="checkbox-field" for="professional-terms">
+              <input id="professional-terms" name="terms" type="checkbox" required>
+              <span>Aceito os termos do protótipo e entendo que nenhum dado será salvo.</span>
+            </label>
+            <small class="field-error" data-error-for="professional-terms"></small>
+
+            <button class="btn btn--primary" type="submit">Criar perfil simulado</button>
+          </form>
+
+          <form class="form-card" data-account-panel="restaurant" data-prototype-form hidden novalidate>
+            <div class="form-card__header">
+              <span class="eyebrow">Restaurante</span>
+              <h2>Crie uma conta simulada para estabelecimento</h2>
+              <p>Use informações fictícias para testar a apresentação.</p>
+            </div>
+
+            <div class="form-alert">Protótipo: não envie dados reais.</div>
+
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="restaurant-name">Nome do estabelecimento</label>
+                <input id="restaurant-name" name="restaurantName" type="text" required disabled>
+                <small class="field-error" data-error-for="restaurant-name"></small>
+              </div>
+
+              <div class="form-field">
+                <label for="restaurant-owner">Nome do responsável</label>
+                <input id="restaurant-owner" name="owner" type="text" autocomplete="name" required disabled>
+                <small class="field-error" data-error-for="restaurant-owner"></small>
+              </div>
+
+              <div class="form-field">
+                <label for="restaurant-email">E-mail</label>
+                <input id="restaurant-email" name="email" type="email" autocomplete="email" required data-validation="email" disabled>
+                <small class="field-error" data-error-for="restaurant-email"></small>
+              </div>
+
+              <div class="form-field">
+                <label for="restaurant-whatsapp">WhatsApp</label>
+                <input id="restaurant-whatsapp" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel" required data-validation="whatsapp" data-mask="whatsapp" disabled>
+                <small class="field-error" data-error-for="restaurant-whatsapp"></small>
+              </div>
+
+              <div class="form-field">
+                <label for="restaurant-type">Tipo de estabelecimento</label>
+                <select id="restaurant-type" name="type" required disabled>
+                  <option value="">Selecione</option>
+                  <option>Restaurante</option>
+                  <option>Bar</option>
+                  <option>Cafeteria</option>
+                  <option>Pizzaria</option>
+                  <option>Hamburgueria</option>
+                  <option>Padaria</option>
+                  <option>Confeitaria</option>
+                  <option>Buffet</option>
+                  <option>Casa de eventos</option>
+                </select>
+                <small class="field-error" data-error-for="restaurant-type"></small>
+              </div>
+
+              <div class="form-field">
+                <label for="restaurant-neighborhood">Bairro</label>
+                <input id="restaurant-neighborhood" name="neighborhood" type="text" required disabled>
+                <small class="field-error" data-error-for="restaurant-neighborhood"></small>
+              </div>
+            </div>
+
+            <label class="checkbox-field" for="restaurant-terms">
+              <input id="restaurant-terms" name="terms" type="checkbox" required disabled>
+              <span>Aceito os termos do protótipo e entendo que nenhum dado será salvo.</span>
+            </label>
+            <small class="field-error" data-error-for="restaurant-terms"></small>
+
+            <button class="btn btn--primary" type="submit">Criar conta simulada</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div>
+        <a class="brand brand--footer" href="../index.html" aria-label="RedeGastro - início">
+          <img src="../assets/images/logo-redegastro.svg" alt="RedeGastro" width="194" height="52">
+        </a>
+        <p>A rede de talentos da gastronomia.</p>
+      </div>
+      <nav class="footer-links" aria-label="Links do rodapé">
+        <a href="profissionais.html">Profissionais</a>
+        <a href="vagas.html">Vagas</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="termos.html">Termos de uso</a>
+        <a href="privacidade.html">Política de privacidade</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <p>Este é um protótipo navegável da RedeGastro para validação da ideia. Nenhum dado é salvo ou processado de forma real.</p>
+      <p>Versão demonstrativa para GitHub Pages. <span data-current-year></span></p>
+    </div>
+  </footer>
+
+  <div class="toast-region" aria-live="polite" aria-atomic="true" data-toast-region></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/filters.js"></script>
+  <script src="../js/forms.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

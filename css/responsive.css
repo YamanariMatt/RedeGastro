@@ -69,6 +69,7 @@
 
   .quick-search,
   .filters-grid,
+  .form-layout,
   .profile-hero__grid,
   .profile-layout,
   .steps,
@@ -78,6 +79,10 @@
   }
 
   .profile-sidebar {
+    position: static;
+  }
+
+  .form-aside {
     position: static;
   }
 
@@ -138,6 +143,7 @@
   .card-grid--jobs,
   .card-grid--professionals,
   .card-grid--directory,
+  .form-grid,
   .availability-grid,
   .criteria-list,
   .work-grid,
